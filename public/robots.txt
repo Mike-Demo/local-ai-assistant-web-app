@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /leaving
+
+Sitemap: https://local-ai-assistant-w-cvm6.bolt.host/sitemap.xml

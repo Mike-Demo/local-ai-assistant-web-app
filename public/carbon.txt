@@ -1,0 +1,16 @@
+# carbon.txt for LocalModel Hub
+# Spec: https://carbontxt.org/syntax  Validate: https://carbontxt.org/tools/validator
+version = "0.6"
+last_updated = 2026-10-15
+
+[org]
+disclosures = [
+  { doc_type = "other", url = "https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Flocal-ai-assistant-w-cvm6.bolt.host%2F" },
+]
+
+[upstream]
+# AI inference runs on the visitor's own device; no server-side compute is used.
+services = [
+  { domain = "cloudflare.com", service_type = ["shared-hosting", "cdn"] },
+  { domain = "huggingface.co", service_type = "cdn" },
+]
