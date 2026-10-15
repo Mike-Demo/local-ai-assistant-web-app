@@ -1,10 +1,10 @@
-export const SITE_URL = 'https://local-ai-assistant-w-cvm6.bolt.host';
+export const SITE_URL = 'https://privatebrain.app';
 export const SITE_NAME = 'LocalModel Hub';
 export const OPEN_SOURCE_PATH = '/open-source';
 export const OPEN_SOURCE_UPDATED = 'October 15, 2026';
 export const OPEN_SOURCE_UPDATED_ISO = '2026-10-15';
 export const GREEN_CHECK_URL =
-  'https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Flocal-ai-assistant-w-cvm6.bolt.host%2F';
+  'https://www.thegreenwebfoundation.org/green-web-check/?url=https%3A%2F%2Fprivatebrain.app%2F';
 
 export const AUTHOR = {
   fullName: 'Mike "Demo" Demopoulos',

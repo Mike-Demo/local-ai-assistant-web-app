@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://local-ai-assistant-w-cvm6.bolt.host/</loc>
+    <loc>https://privatebrain.app/</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://local-ai-assistant-w-cvm6.bolt.host/open-source</loc>
+    <loc>https://privatebrain.app/open-source</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://local-ai-assistant-w-cvm6.bolt.host/beta-terms</loc>
+    <loc>https://privatebrain.app/beta-terms</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>

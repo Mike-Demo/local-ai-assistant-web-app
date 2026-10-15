@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /leaving
 
-Sitemap: https://local-ai-assistant-w-cvm6.bolt.host/sitemap.xml
+Sitemap: https://privatebrain.app/sitemap.xml
