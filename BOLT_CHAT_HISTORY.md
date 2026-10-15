@@ -2260,7 +2260,7 @@ Publish this application.
 Your site has been successfully published! You can view it at:
 https://local-ai-assistant-w-cvm6.bolt.host
 
-Install pexoai-agent skill from https://clawhub.ai/pexo/pexo-video-agent with config: API_KEY=sk-141k6Yx6iK4FoeCeQcLyBMldn6RemHrD4Urss8TG
+Install pexoai-agent skill from https://clawhub.ai/pexo/pexo-video-agent with config: API_KEY=<redacted>
 
 I’ll inspect the skill-installation guidance and the project’s existing skill setup, while keeping the API key out of files and logs.
 
