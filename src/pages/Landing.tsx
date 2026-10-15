@@ -7,6 +7,7 @@ import { detectMobile } from '@/lib/preflight';
 import { AUTHOR, OPEN_SOURCE_PATH } from '@/lib/site';
 import { ArrowRight, Gauge, Github, Leaf, MonitorX, ShieldCheck, Twitter } from 'lucide-react';
 import { AdvancedSection, DeviceRecommendation, TrustBadges } from '@/components/LandingParts';
+import { useCarbonEstimate } from '@/hooks/useCarbonEstimate';
 import type { CatalogModel } from '@/lib/catalogTypes';
 import type { DeviceCapability } from '@/lib/deviceCapability';
 import type { PreflightOutcome } from '@/lib/preflight';
@@ -32,6 +33,7 @@ export default function Landing({
   const [pending, setPending] = useState<(() => void) | null>(null);
   const [isMobile] = useState(detectMobile);
   const noWebGpu = Boolean(capability?.detected && !capability.webgpu);
+  const co2Grams = useCarbonEstimate();
 
   const requireAgreement = (action: () => void) => {
     if (hasAcceptedBetaTerms()) action();
@@ -162,6 +164,11 @@ export default function Landing({
           carbon.txt
         </a>
         </div>
+        {co2Grams !== null && (
+          <p className="text-center text-xs text-neutral-600 dark:text-neutral-400">
+            This visit ≈ {co2Grams < 0.01 ? co2Grams.toFixed(4) : co2Grams.toFixed(2)} g CO₂e · estimated with CO2.js (The Green Web Foundation) · AI chats run on your device.
+          </p>
+        )}
         <div className="flex items-center gap-2 text-xs text-neutral-600 dark:text-neutral-400">
           <span>
             Made by <span className="font-semibold text-neutral-800 dark:text-neutral-200">{AUTHOR.displayName}</span>
