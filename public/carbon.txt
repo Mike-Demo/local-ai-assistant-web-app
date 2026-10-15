@@ -11,6 +11,7 @@ disclosures = [
 [upstream]
 # AI inference runs on the visitor's own device; no server-side compute is used.
 services = [
-  { domain = "cloudflare.com", service_type = ["shared-hosting", "cdn"] },
+  { domain = "bolt.new", service_type = "shared-hosting" },
+  { domain = "cloudflare.com", service_type = "cdn" },
   { domain = "huggingface.co", service_type = "cdn" },
 ]
