@@ -1,13 +1,14 @@
 import { MODELS } from '@/data/models';
 import { ATTRIBUTIONS, BUILD_TOOLS, RUNTIME_TOOLS } from '@/data/openSource';
 import { BETA_TERMS_PATH, BETA_TERMS_VERSION } from '@/lib/beta';
-import { AUTHOR, GREEN_CHECK_URL, OPEN_SOURCE_PATH, OPEN_SOURCE_UPDATED_ISO, PROJECT_LICENSE, SITE_NAME, SITE_URL } from '@/lib/site';
+import { AUTHOR, GREEN_CHECK_URL, OPEN_SOURCE_PATH, OPEN_SOURCE_UPDATED_ISO, PROJECT_LICENSE, REPO_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 
 type Node = Record<string, unknown>;
 
 const PERSON_ID = `${SITE_URL}/#person`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
 const APP_ID = `${SITE_URL}/#app`;
+const SOURCE_ID = `${SITE_URL}/#source`;
 
 const ref = (id: string) => ({ '@id': id });
 
@@ -72,6 +73,19 @@ function baseNodes(): Node[] {
       creator: ref(PERSON_ID),
       publisher: ref(PERSON_ID),
       isPartOf: ref(WEBSITE_ID),
+      sameAs: [REPO_URL],
+      isBasedOn: ref(SOURCE_ID),
+    },
+    {
+      '@type': 'SoftwareSourceCode',
+      '@id': SOURCE_ID,
+      name: `${SITE_NAME} source code`,
+      url: REPO_URL,
+      codeRepository: REPO_URL,
+      programmingLanguage: 'TypeScript',
+      license: PROJECT_LICENSE.url,
+      author: ref(PERSON_ID),
+      targetProduct: ref(APP_ID),
     },
   ];
 }

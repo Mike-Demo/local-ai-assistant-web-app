@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowUpRight, Boxes, Code2, Github, HeartHandshake, Leaf, Sc
 import type { ComponentType, ReactNode } from 'react';
 import { MODELS } from '@/data/models';
 import { ATTRIBUTIONS, BUILD_TOOLS, RUNTIME_TOOLS, type OpenSourceTool } from '@/data/openSource';
-import { AUTHOR, OPEN_SOURCE_UPDATED, PROJECT_LICENSE } from '@/lib/site';
+import { AUTHOR, OPEN_SOURCE_UPDATED, PROJECT_LICENSE, REPO_URL } from '@/lib/site';
 
 const LINK =
   'font-semibold text-[#245a96] underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2f6fb5] rounded-sm dark:text-sky-200';
@@ -96,6 +96,17 @@ export default function OpenSource() {
             open-source projects and model makers, credited below.
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-2">
+            <a
+              href={REPO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-1.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-neutral-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2f6fb5] focus-visible:ring-offset-2 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 dark:ring-offset-neutral-950"
+            >
+              <Github className="h-4 w-4" aria-hidden />
+              View on GitHub
+              <ArrowUpRight className="h-3.5 w-3.5 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden />
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
             <a
               href={AUTHOR.github}
               target="_blank"
