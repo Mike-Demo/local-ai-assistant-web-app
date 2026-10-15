@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { BetaAgreementDialog } from '@/components/BetaAgreementDialog';
 import { BetaBadge } from '@/components/BetaBadge';
-import { GreenHostingBadge } from '@/components/GreenHostingBadge';
 import { MobileWarning } from '@/components/MobileWarning';
 import { acceptBetaTerms, BETA_TERMS_PATH, hasAcceptedBetaTerms } from '@/lib/beta';
 import { detectMobile } from '@/lib/preflight';
@@ -141,7 +140,6 @@ export default function Landing({
       </main>
 
       <footer className="relative z-10 flex flex-col items-center gap-4 px-4 pb-6">
-        <GreenHostingBadge />
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-xs text-neutral-600 dark:text-neutral-400">
         <span>Beta · 100% local · Open source · No data leaves this device</span>
         <span aria-hidden>·</span>
