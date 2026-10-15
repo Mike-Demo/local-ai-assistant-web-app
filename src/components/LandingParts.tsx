@@ -95,9 +95,28 @@ export function AdvancedSection({
   const webllmModels = models.filter((m) => m.webllm.supported);
 
   const handleClearCache = async () => {
+    const modelPattern = /webllm|mlc|model/i;
     if (window.caches) {
       const keys = await window.caches.keys();
-      await Promise.all(keys.map((k) => window.caches.delete(k)));
+      const modelCaches = keys.filter((k) => modelPattern.test(k));
+      await Promise.all(modelCaches.map((k) => window.caches.delete(k)));
+    }
+    try {
+      const dbs = await indexedDB.databases?.();
+      const modelDbs = (dbs ?? []).filter((db) => db.name && modelPattern.test(db.name));
+      await Promise.all(
+        modelDbs.map(
+          (db) =>
+            new Promise<void>((resolve) => {
+              const req = indexedDB.deleteDatabase(db.name!);
+              req.onsuccess = () => resolve();
+              req.onerror = () => resolve();
+              req.onblocked = () => resolve();
+            }),
+        ),
+      );
+    } catch {
+      /* indexedDB.databases() not supported in all browsers */
     }
     setCacheCleared(true);
   };

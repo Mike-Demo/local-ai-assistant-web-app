@@ -31,7 +31,10 @@ export async function detectCapability(): Promise<DeviceCapability> {
   let freeStorageGb: number | null = null;
   try {
     const est = await navigator.storage?.estimate?.();
-    if (est?.quota != null) freeStorageGb = Math.floor(est.quota / 1024 ** 3);
+    if (est?.quota != null && est.usage != null) {
+      const available = Math.max(est.quota - est.usage, 0);
+      freeStorageGb = Math.floor(available / 1024 ** 3);
+    }
   } catch {
     /* estimate unavailable */
   }
