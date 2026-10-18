@@ -1,0 +1,178 @@
+{
+  "boltSlidesVersion": 1,
+  "boltSlidesId": "11011050-f9d6-4d43-8a9e-3e43af51bbaf",
+  "deck": {
+    "title": "LocalModel Hub — AI that never leaves your device",
+    "transition": "fade",
+    "font": "space",
+    "accent": "#22d3ee"
+  },
+  "slides": [
+    {
+      "id": "s1",
+      "position": 0,
+      "layout": "cover",
+      "props": {
+        "kicker": "LocalModel Hub · privatebrain.app",
+        "title": "AI that ==never leaves== your device.",
+        "subtitle": "A full AI chat that runs entirely in your browser — on your own GPU. No servers. No accounts. No trace.",
+        "foot": "Mike Demo · Bolt Builder Week · October 2026"
+      },
+      "background": { "type": "color", "color": "var(--bg)" },
+      "animation": "cascade",
+      "transition": null,
+      "nav": null,
+      "notes": "Open with the promise: everything you type stays on the machine you're sitting at. Live demo is at privatebrain.app.",
+      "status": "none"
+    },
+    {
+      "id": "s2",
+      "position": 1,
+      "layout": "statement",
+      "props": {
+        "kicker": "The problem",
+        "title": "Every prompt you type ==leaves your machine.==",
+        "body": "Cloud AI chat sends each message to someone else's server — a privacy cost most people pay without noticing. For sensitive thinking, it's a non-starter."
+      },
+      "background": { "type": "color", "color": "var(--bg)" },
+      "animation": "cascade",
+      "transition": null,
+      "nav": null,
+      "notes": "Make it personal: drafts, health questions, work secrets — all of it currently travels to a third party. Pause before moving on.",
+      "status": "none"
+    },
+    {
+      "id": "s3",
+      "position": 2,
+      "layout": "chat",
+      "props": {
+        "kicker": "What it does",
+        "title": "A full AI chat, ==100% on your device.==",
+        "name": "LocalModel Hub",
+        "messages": [
+          { "from": "user", "text": "Summarize these private notes. Nothing gets uploaded, right?" },
+          { "from": "ai", "text": "Right — I'm running on your device's GPU. This conversation never touches a server." },
+          { "from": "user", "text": "And if I go offline?" },
+          { "from": "ai", "text": "After the model downloads once, I keep working. Airplane mode included." }
+        ]
+      },
+      "background": { "type": "color", "color": "var(--bg)" },
+      "animation": "cascade",
+      "transition": null,
+      "nav": null,
+      "notes": "The chat on screen is the product shape: familiar AI chat, but the model lives in the browser tab. Download once, then conversations happen entirely on-device.",
+      "status": "none"
+    },
+    {
+      "id": "s4",
+      "position": 3,
+      "layout": "steps",
+      "props": {
+        "kicker": "How it works",
+        "title": "A real LLM, running ==in the tab.==",
+        "items": [
+          { "title": "WebLLM + WebGPU", "body": "A real language model runs locally in the browser, accelerated by the device's own GPU." },
+          { "title": "Pick your model", "body": "Choose one sized to your hardware — from lightweight to full-size open models." },
+          { "title": "Download once", "body": "The model caches on your device. After that first download, no connection needed." },
+          { "title": "Chat anywhere", "body": "Offline-capable and private by default. Your history lives only on your machine." }
+        ]
+      },
+      "background": { "type": "color", "color": "var(--bg)" },
+      "animation": "cascade",
+      "transition": null,
+      "nav": null,
+      "notes": "Keep it light on tech: WebLLM and WebGPU make in-browser inference real. The only network moment is the one-time model download.",
+      "status": "none"
+    },
+    {
+      "id": "s5",
+      "position": 4,
+      "layout": "contrast",
+      "props": {
+        "kicker": "The difference",
+        "title": "Private ==by architecture,== not by policy.",
+        "left": {
+          "label": "Cloud AI",
+          "title": "Privacy is a promise",
+          "points": [
+            "Every chat lives on their servers",
+            "Trust the provider's policy — and its vendors",
+            "A breach, subpoena, or leak exposes everything"
+          ]
+        },
+        "right": {
+          "label": "LocalModel Hub",
+          "title": "Privacy is structural",
+          "points": [
+            "There is no chat server to breach",
+            "Nothing to subpoena, nothing to leak",
+            "Works offline — nothing to intercept"
+          ]
+        }
+      },
+      "background": { "type": "color", "color": "var(--bg)" },
+      "animation": "cascade",
+      "transition": null,
+      "nav": null,
+      "notes": "The key line of the deck: cloud privacy depends on someone else's behavior; ours depends on the absence of a server. Structural, not contractual.",
+      "status": "none"
+    },
+    {
+      "id": "s6",
+      "position": 5,
+      "layout": "bento",
+      "props": {
+        "kicker": "Key features",
+        "title": "Everything a chat app does — ==without the cloud.==",
+        "tiles": [
+          { "k": "01", "fig": "100%", "title": "On-device", "body": "Inference runs entirely in the browser on your GPU.", "c": 3, "variant": "accent" },
+          { "k": "02", "fig": "0", "title": "Servers involved", "body": "No account, no upload, no telemetry.", "c": 3 },
+          { "k": "03", "fig": "1×", "title": "Download once", "body": "The model caches locally — then works offline.", "c": 2 },
+          { "k": "04", "title": "Model choice", "body": "Pick a model sized to your hardware.", "c": 2 },
+          { "k": "05", "title": "WebGPU speed", "body": "Hardware-accelerated, right in the tab.", "c": 2 },
+          { "k": "06", "title": "Free & open", "body": "Free at privatebrain.app; source on GitHub.", "c": 2 }
+        ]
+      },
+      "background": { "type": "color", "color": "var(--bg)" },
+      "animation": "cascade",
+      "transition": null,
+      "nav": null,
+      "notes": "Hit the two headline tiles first — 100% on-device, zero servers — then move quickly across the rest.",
+      "status": "none"
+    },
+    {
+      "id": "s7",
+      "position": 6,
+      "layout": "bigNumber",
+      "props": {
+        "kicker": "Status",
+        "value": "Oct 15, 2026",
+        "caption": "Submitted to Bolt Builder Week — live and free today at privatebrain.app",
+        "foot": "github.com/Mike-Demo/local-ai-assistant-web-app"
+      },
+      "background": { "type": "color", "color": "var(--bg)" },
+      "animation": "cascade",
+      "transition": null,
+      "nav": null,
+      "notes": "Shipped and public: submitted to Bolt Builder Week on October 15, 2026. It's live right now — anyone can open it and chat.",
+      "status": "none"
+    },
+    {
+      "id": "s8",
+      "position": 7,
+      "layout": "cover",
+      "props": {
+        "kicker": "LocalModel Hub",
+        "title": "Your thoughts belong ==to you.==",
+        "subtitle": "Try it now, free — privatebrain.app\nSource: github.com/Mike-Demo/local-ai-assistant-web-app",
+        "foot": "Built for Bolt Builder Week · October 2026"
+      },
+      "background": { "type": "color", "color": "var(--bg)" },
+      "animation": "cascade",
+      "transition": null,
+      "nav": null,
+      "notes": "Close on the site and repo. Invite them to open privatebrain.app on their own machine and watch the model download once.",
+      "status": "none"
+    }
+  ]
+}
