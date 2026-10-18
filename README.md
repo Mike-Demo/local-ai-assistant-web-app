@@ -8,6 +8,10 @@ A privacy-first AI assistant that runs open-source large language models **entir
 
 After a one-time model download, the app works fully offline. It has been tested in airplane mode: the chat keeps answering with the network completely off.
 
+## New: BoltLocal — build apps with local AI
+
+LocalModel Hub now builds, too. **[BoltLocal](https://boltlocal-ehg6.bolt.host)** (beta) is an app builder on the same principle: describe a small web app and a local model in your browser writes the code — prompts and code never leave the device, and previews are blocked from the network by default. Built in Bolt during the Forge weekend, based on a fork of the open-source bolt.diy project (MIT). Source: [Mike-Demo/boltlocal](https://github.com/Mike-Demo/boltlocal). It is linked from the live site's "New — Build apps with local AI" section.
+
 ## Why
 
 Cloud AI means your words travel to someone else's servers, where they can be logged, trained on, or leaked. LocalModel Hub takes the opposite approach:
