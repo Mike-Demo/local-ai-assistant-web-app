@@ -152,7 +152,7 @@ export default function Landing({
         </p>
         <div className="mt-6 flex justify-center">
           <a
-            href="https://boltlocal-ehg6.bolt.host"
+            href="https://build.privatebrain.app"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-grad text-sm"
