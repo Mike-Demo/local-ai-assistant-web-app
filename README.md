@@ -10,7 +10,7 @@ After a one-time model download, the app works fully offline. It has been tested
 
 ## New: BoltLocal — build apps with local AI
 
-LocalModel Hub now builds, too. **[BoltLocal](https://boltlocal-ehg6.bolt.host)** (beta) is an app builder on the same principle: describe a small web app and a local model in your browser writes the code — prompts and code never leave the device, and previews are blocked from the network by default. Built in Bolt during the Forge weekend, based on a fork of the open-source bolt.diy project (MIT). Source: [Mike-Demo/boltlocal](https://github.com/Mike-Demo/boltlocal). It is linked from the live site's "New — Build apps with local AI" section.
+LocalModel Hub now builds, too. **[BoltLocal](https://build.privatebrain.app)** (beta) is an app builder on the same principle: describe a small web app and a local model in your browser writes the code — prompts and code never leave the device, and previews are blocked from the network by default. Built in Bolt during the Forge weekend, based on a fork of the open-source bolt.diy project (MIT). Source: [Mike-Demo/boltlocal](https://github.com/Mike-Demo/boltlocal). It is linked from the live site's "New — Build apps with local AI" section.
 
 ## Why
 
