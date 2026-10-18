@@ -141,6 +141,28 @@ export default function Landing({
         </div>
       </main>
 
+      <section className="relative z-10 mx-auto w-full max-w-2xl px-4 pb-12 text-center">
+        <h2 className="text-2xl font-extrabold leading-snug tracking-tight sm:text-3xl">
+          New — <span className="text-grad">Build apps with local AI</span>
+        </h2>
+        <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
+          BoltLocal is the newest part of LocalModel Hub. Describe a small web app and a model running entirely in your
+          browser writes the code — your prompts and your code never leave this device, and previews are blocked from
+          the network.
+        </p>
+        <div className="mt-6 flex justify-center">
+          <a
+            href="https://boltlocal-ehg6.bolt.host"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-grad text-sm"
+          >
+            Try BoltLocal (beta)
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
+        </div>
+      </section>
+
       <footer className="relative z-10 flex flex-col items-center gap-4 px-4 pb-6">
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-xs text-neutral-600 dark:text-neutral-400">
         <span>Beta · 100% local · Open source · No data leaves this device</span>
