@@ -8,6 +8,7 @@ import { speedLabel } from '@/lib/speedLabel';
 import { BitLogo } from '@/components/privacyTips/BitLogo';
 import { usePrivacyTips } from '@/components/privacyTips/privacyTipsContext';
 import { buildSystemPrompt, loadPrefs, type OnboardingPrefs } from '../lib/onboarding';
+import { FRIENDLY_MESSAGES } from '@/lib/errorHandling';
 
 interface Msg {
   role: 'user' | 'assistant';
@@ -123,8 +124,24 @@ export default function Chat({
       {/* Composer */}
       <div className="border-t border-neutral-200/60 bg-white/70 px-4 py-3 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/70">
         {engine.status === 'error' && (
-          <div role="alert" className="mx-auto mb-2 flex max-w-2xl items-center gap-2 rounded-xl bg-red-500/10 px-3 py-2 text-xs text-red-700 dark:text-red-400">
-            <AlertCircle className="h-3.5 w-3.5 shrink-0" aria-hidden /> {engine.error}
+          <div role="alert" className="mx-auto mb-2 max-w-2xl rounded-xl bg-red-500/10 px-3 py-2 text-xs text-red-700 dark:text-red-400">
+            <p className="flex items-center gap-2">
+              <AlertCircle className="h-3.5 w-3.5 shrink-0" aria-hidden />
+              {FRIENDLY_MESSAGES[engine.errorCategory ?? 'unknown']}
+            </p>
+            {engine.error && (
+              <details className="mt-1.5">
+                <summary className="cursor-pointer font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600">
+                  Technical details
+                </summary>
+                <p className="mt-1 break-words text-neutral-600 dark:text-neutral-400">
+                  Only useful if you are reporting a problem. Nothing here is sent anywhere.
+                </p>
+                <p className="mt-1 break-words text-neutral-700 dark:text-neutral-300">
+                  {engine.error.length > 240 ? `${engine.error.slice(0, 240)}…` : engine.error}
+                </p>
+              </details>
+            )}
           </div>
         )}
         <div className="mx-auto flex max-w-2xl items-end gap-2">
